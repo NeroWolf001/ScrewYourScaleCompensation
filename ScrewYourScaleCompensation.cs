@@ -9,7 +9,7 @@ namespace ScrewYourScaleCompensation
     {
         public override string Name => "ScrewYourScaleCompensation";
         public override string Author => "NeroWolf & LeCloutPanda";
-        public override string Version => "1.0.1";
+        public override string Version => "1.0.2";
 
         public static ModConfiguration config;
 
@@ -42,7 +42,6 @@ namespace ScrewYourScaleCompensation
 
         // Notes
         // We are not liable for any problems that come from usage of this mod.
-        // Fuck I need a drink
         // LeCloutPanda#9456 & NeroWolf#0001
     }
 }
