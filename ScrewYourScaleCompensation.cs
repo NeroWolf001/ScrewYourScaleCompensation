@@ -32,14 +32,10 @@ namespace ScrewYourScaleCompensation
             [HarmonyPostfix]
             static void FixScaleCompensation(AvatarAudioOutputManager __instance, Sync<float> ____scaleCompensation)
             {
-                __instance.RunInUpdates(3, () =>
+                __instance.RunInUpdates(0, () =>
                 {
                     if (!config.GetValue(enabled)) return;
-
-                    var valueUserOverride = __instance.Slot.AttachComponent<ValueUserOverride<float>>();
-                    valueUserOverride.Target.Value = ____scaleCompensation.ReferenceID;
-                    valueUserOverride.Default.Value = 1f;
-                    valueUserOverride.Persistent = false;
+                    ____scaleCompensation.OverrideForUser(__instance.LocalUser, 1f).Persistent = false;
                 });
             }
         }
