@@ -35,7 +35,7 @@ namespace ScrewYourScaleCompensation
                 __instance.RunInUpdates(0, () =>
                 {
                     if (!config.GetValue(enabled)) return;
-                    ____scaleCompensation.OverrideForUser(LocalUser, 1f).Persistent = false;
+                    ____scaleCompensation.OverrideForUser(__instance.LocalUser, 1f).Persistent = false;
                 });
             }
         }
